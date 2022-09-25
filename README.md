@@ -1,7 +1,7 @@
 FreeCOM1
 ================
 
-[![Build Status](https://github.com/flagersgit/FreeCOM1/workflows/CI/badge.svg?branch=master)](https://github.com/flagersgit/FreeCOM1/actions)
+[![Build Status](https://github.com/flagersgit/FreeCOM1/workflows/CI/badge.svg?branch=main)](https://github.com/flagersgit/FreeCOM1/actions)
 
 [Lilu](https://github.com/acidanthera/Lilu) Kernel extension for enabling userspace access to COM ports not reserved for kernel printf when DB_KPRT is enabled.
 
