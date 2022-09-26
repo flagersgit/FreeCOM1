@@ -1,4 +1,4 @@
-FreeCOM1
+FreeCOM2
 ================
 
 [![Build Status](https://github.com/flagersgit/FreeCOM1/workflows/CI/badge.svg?branch=main)](https://github.com/flagersgit/FreeCOM1/actions)
@@ -15,9 +15,9 @@ FreeCOM1
 
 #### Boot arguments
 
-- `-fcom1off` (or `-liluoff`) to disable
-- `-fcom1dbg` (or `-liludbgall`) to enable verbose logging (in DEBUG builds)
-- `-fcom1beta` (or `-lilubetaall`) to enable on macOS newer than 13
+- `-fcom2off` (or `-liluoff`) to disable
+- `-fcom2dbg` (or `-liludbgall`) to enable verbose logging (in DEBUG builds)
+- `-fcom2beta` (or `-lilubetaall`) to enable on macOS newer than 13
 
 ### Credits
 

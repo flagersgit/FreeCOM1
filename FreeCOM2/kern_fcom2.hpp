@@ -1,15 +1,15 @@
 //
-//  kern_fcom1.hpp
-//  FreeCOM1
+//  kern_fcom2.hpp
+//  FreeCOM2
 //
 //  Created by flagers on 9/5/22.
 //  Copyright © 2022 flagers. All rights reserved.
 //
 
-#ifndef kern_fcom1_hpp
-#define kern_fcom1_hpp
+#ifndef kern_fcom2_hpp
+#define kern_fcom2_hpp
 
-#define MODULE_SHORT "fcom1"
+#define MODULE_SHORT "fcom2"
 
 #include <IOKit/IOService.h>
 #include <Headers/kern_patcher.hpp>
@@ -19,22 +19,14 @@ static KernelPatcher::KextInfo kextList[] {
   {"com.apple.driver.Apple16X50ACPI", kext16X50ACPI, arrsize(kext16X50ACPI), {true}, {}, KernelPatcher::KextInfo::Unloaded },
 };
 
-static const char *_16X50ACPI_probe_symbol { "__ZN26com_apple_driver_16X50ACPI5probeEP9IOServicePi" };
-
-class FCOM1 {
+class FCOM2 {
 public:
   void init();
   void deinit();
     
 private:
   void processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t addres, size_t size);
-    
-  // argument 'that' is actually the driver IOKit class, but we
-  // ...don't care about those interfaces, so just use IOService.
-  static IOService* _16X50ACPI_probe_handler(IOService *that, IOService *provider, SInt32 *score);
-    
-  mach_vm_address_t _16X50ACPI_probe_orig {0};
 };
 
 
-#endif /* kern_fcom1_hpp */
+#endif /* kern_fcom2_hpp */

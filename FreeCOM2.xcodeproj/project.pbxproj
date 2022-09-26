@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81C9BB4928C5B3E30088C5A3 /* kern_fcom1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81C9BB4728C5B3E30088C5A3 /* kern_fcom1.cpp */; };
-		81C9BB4A28C5B3E30088C5A3 /* kern_fcom1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 81C9BB4828C5B3E30088C5A3 /* kern_fcom1.hpp */; };
+		817C3CB028E0E179002EA298 /* KillCOM1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 817C3CAE28E0E179002EA298 /* KillCOM1.cpp */; };
+		817C3CB128E0E179002EA298 /* KillCOM1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 817C3CAF28E0E179002EA298 /* KillCOM1.hpp */; };
+		81C9BB4928C5B3E30088C5A3 /* kern_fcom2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81C9BB4728C5B3E30088C5A3 /* kern_fcom2.cpp */; };
+		81C9BB4A28C5B3E30088C5A3 /* kern_fcom2.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 81C9BB4828C5B3E30088C5A3 /* kern_fcom2.hpp */; };
 		CEDE8D7B22984F8F00C73034 /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDE8D6E22984F7700C73034 /* libkmod.a */; };
 		CEDE8D7C22984FE600C73034 /* plugin_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDE8D7822984F7700C73034 /* plugin_start.cpp */; };
 		CEDE8D7E2298501600C73034 /* kern_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDE8D7D2298501600C73034 /* kern_start.cpp */; };
@@ -18,9 +20,11 @@
 		810098972783803800076D10 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		810F1BA426C4635000452AE5 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = usr/lib/libkmod.a; sourceTree = SDKROOT; };
 		810F1BA526C4635F00452AE5 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = "<group>"; };
-		81C9BB4728C5B3E30088C5A3 /* kern_fcom1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kern_fcom1.cpp; sourceTree = "<group>"; };
-		81C9BB4828C5B3E30088C5A3 /* kern_fcom1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_fcom1.hpp; sourceTree = "<group>"; };
-		CEDE8CE522984C0800C73034 /* FreeCOM1.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeCOM1.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		817C3CAE28E0E179002EA298 /* KillCOM1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KillCOM1.cpp; sourceTree = "<group>"; };
+		817C3CAF28E0E179002EA298 /* KillCOM1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = KillCOM1.hpp; sourceTree = "<group>"; };
+		81C9BB4728C5B3E30088C5A3 /* kern_fcom2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kern_fcom2.cpp; sourceTree = "<group>"; };
+		81C9BB4828C5B3E30088C5A3 /* kern_fcom2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_fcom2.hpp; sourceTree = "<group>"; };
+		CEDE8CE522984C0800C73034 /* FreeCOM2.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeCOM2.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDE8CEC22984C0800C73034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDE8D4D22984F7600C73034 /* kern_config.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_config.hpp; sourceTree = "<group>"; };
 		CEDE8D4E22984F7600C73034 /* kern_atomic.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_atomic.hpp; sourceTree = "<group>"; };
@@ -92,7 +96,7 @@
 			children = (
 				CEDE8D4B22984F5B00C73034 /* SDK */,
 				810098972783803800076D10 /* README.md */,
-				CEDE8CE722984C0800C73034 /* FreeCOM1 */,
+				CEDE8CE722984C0800C73034 /* FreeCOM2 */,
 				CEDE8CE622984C0800C73034 /* Products */,
 				810F1BA326C4634F00452AE5 /* Frameworks */,
 			);
@@ -101,20 +105,22 @@
 		CEDE8CE622984C0800C73034 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEDE8CE522984C0800C73034 /* FreeCOM1.kext */,
+				CEDE8CE522984C0800C73034 /* FreeCOM2.kext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEDE8CE722984C0800C73034 /* FreeCOM1 */ = {
+		CEDE8CE722984C0800C73034 /* FreeCOM2 */ = {
 			isa = PBXGroup;
 			children = (
 				CEDE8CEC22984C0800C73034 /* Info.plist */,
 				CEDE8D7D2298501600C73034 /* kern_start.cpp */,
-				81C9BB4728C5B3E30088C5A3 /* kern_fcom1.cpp */,
-				81C9BB4828C5B3E30088C5A3 /* kern_fcom1.hpp */,
+				81C9BB4728C5B3E30088C5A3 /* kern_fcom2.cpp */,
+				81C9BB4828C5B3E30088C5A3 /* kern_fcom2.hpp */,
+				817C3CAE28E0E179002EA298 /* KillCOM1.cpp */,
+				817C3CAF28E0E179002EA298 /* KillCOM1.hpp */,
 			);
-			path = FreeCOM1;
+			path = FreeCOM2;
 			sourceTree = "<group>";
 		};
 		CEDE8D4B22984F5B00C73034 /* SDK */ = {
@@ -214,16 +220,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81C9BB4A28C5B3E30088C5A3 /* kern_fcom1.hpp in Headers */,
+				81C9BB4A28C5B3E30088C5A3 /* kern_fcom2.hpp in Headers */,
+				817C3CB128E0E179002EA298 /* KillCOM1.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CEDE8CE422984C0800C73034 /* FreeCOM1 */ = {
+		CEDE8CE422984C0800C73034 /* FreeCOM2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEDE8CEF22984C0800C73034 /* Build configuration list for PBXNativeTarget "FreeCOM1" */;
+			buildConfigurationList = CEDE8CEF22984C0800C73034 /* Build configuration list for PBXNativeTarget "FreeCOM2" */;
 			buildPhases = (
 				CEDE8CE022984C0800C73034 /* Headers */,
 				CEDE8CE122984C0800C73034 /* Sources */,
@@ -235,9 +242,9 @@
 			);
 			dependencies = (
 			);
-			name = FreeCOM1;
+			name = FreeCOM2;
 			productName = FreeCOM1;
-			productReference = CEDE8CE522984C0800C73034 /* FreeCOM1.kext */;
+			productReference = CEDE8CE522984C0800C73034 /* FreeCOM2.kext */;
 			productType = "com.apple.product-type.kernel-extension";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEDE8CDF22984C0800C73034 /* Build configuration list for PBXProject "FreeCOM1" */;
+			buildConfigurationList = CEDE8CDF22984C0800C73034 /* Build configuration list for PBXProject "FreeCOM2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -267,7 +274,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEDE8CE422984C0800C73034 /* FreeCOM1 */,
+				CEDE8CE422984C0800C73034 /* FreeCOM2 */,
 			);
 		};
 /* End PBXProject section */
@@ -308,9 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817C3CB028E0E179002EA298 /* KillCOM1.cpp in Sources */,
 				CEDE8D7C22984FE600C73034 /* plugin_start.cpp in Sources */,
 				CEDE8D7E2298501600C73034 /* kern_start.cpp in Sources */,
-				81C9BB4928C5B3E30088C5A3 /* kern_fcom1.cpp in Sources */,
+				81C9BB4928C5B3E30088C5A3 /* kern_fcom2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,17 +455,17 @@
 					"PRODUCT_NAME=$(PRODUCT_NAME)",
 				);
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Lilu.kext/Contents/Resources";
-				INFOPLIST_FILE = "$(SRCROOT)/FreeCOM1/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FreeCOM2/Info.plist";
 				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
 				MARKETING_VERSION = 1.0.0;
-				MODULE_NAME = com.flagers.FreeCOM1;
+				MODULE_NAME = com.flagers.FreeCOM2;
 				MODULE_START = "$(PRODUCT_NAME)_kern_start";
 				MODULE_STOP = "$(PRODUCT_NAME)_kern_stop";
 				MODULE_VERSION = 1.0.0;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.flagers.FreeCOM1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagers.FreeCOM2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -476,17 +484,17 @@
 					"PRODUCT_NAME=$(PRODUCT_NAME)",
 				);
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Lilu.kext/Contents/Resources";
-				INFOPLIST_FILE = "$(SRCROOT)/FreeCOM1/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FreeCOM2/Info.plist";
 				KERNEL_EXTENSION_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				KERNEL_FRAMEWORK_HEADERS = "$(PROJECT_DIR)/MacKernelSDK/Headers";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/MacKernelSDK/Library/x86_64";
 				MARKETING_VERSION = 1.0.0;
-				MODULE_NAME = com.flagers.FreeCOM1;
+				MODULE_NAME = com.flagers.FreeCOM2;
 				MODULE_START = "$(PRODUCT_NAME)_kern_start";
 				MODULE_STOP = "$(PRODUCT_NAME)_kern_stop";
 				MODULE_VERSION = 1.0.0;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.flagers.FreeCOM1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flagers.FreeCOM2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -495,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEDE8CDF22984C0800C73034 /* Build configuration list for PBXProject "FreeCOM1" */ = {
+		CEDE8CDF22984C0800C73034 /* Build configuration list for PBXProject "FreeCOM2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEDE8CED22984C0800C73034 /* Debug */,
@@ -504,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEDE8CEF22984C0800C73034 /* Build configuration list for PBXNativeTarget "FreeCOM1" */ = {
+		CEDE8CEF22984C0800C73034 /* Build configuration list for PBXNativeTarget "FreeCOM2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEDE8CF022984C0800C73034 /* Debug */,

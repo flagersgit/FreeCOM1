@@ -1,6 +1,6 @@
 //
 //  kern_start.cpp
-//  FreeCOM1
+//  FreeCOM2
 //
 //  Copyright © 2022 flagers. All rights reserved.
 //
@@ -9,9 +9,9 @@
 #include <Headers/plugin_start.hpp>
 #include <Headers/kern_api.hpp>
 
-#include "kern_fcom1.hpp"
+#include "kern_fcom2.hpp"
 
-static FCOM1 fcom1;
+static FCOM2 fcom2;
 
 #pragma mark - Plugin start
 static void pluginStart() {
@@ -19,7 +19,7 @@ static void pluginStart() {
     DBGLOG(MODULE_SHORT, "start");
     PE_parse_boot_argn("debug", &kernelDebugArg, sizeof(kernelDebugArg));
     if ((kernelDebugArg & 8) != 0) {
-        fcom1.init();
+        fcom2.init();
     } else {
         SYSLOG(MODULE_SHORT, "DB_KPRT not in kernel debug mask; nothing to do.");
     }
@@ -27,13 +27,13 @@ static void pluginStart() {
 
 // Boot args.
 static const char *bootargOff[] {
-    "-fcom1off"
+    "-fcom2off"
 };
 static const char *bootargDebug[] {
-    "-fcom1dbg"
+    "-fcom2dbg"
 };
 static const char *bootargBeta[] {
-    "-fcom1beta"
+    "-fcom2beta"
 };
 
 // Plugin configuration.
